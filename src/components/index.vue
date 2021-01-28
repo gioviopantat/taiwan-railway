@@ -2,15 +2,19 @@
   <div id="app">
     <!-- <img class="abc" src="../assets/123.png" /> -->
     <div class="topbar">
-      <h1 @mouseover="hover1" @mouseleave="leave1" class="topbar-station-text">
+      <h1
+        v-on:mouseover="hover1"
+        v-on:mouseleave="leave1"
+        class="topbar-station-text"
+      >
         {{ Station }}
       </h1>
       <h1 class="topbar-history-text">History</h1>
-      <img class="logo1" src="../assets/logo.png" />
       <h1 class="topbar-commodity-text">Commodity</h1>
       <h1 class="topbar-tickets-text">Tickets</h1>
       <img class="avatar-woman" src="../assets/_1_.png" />
     </div>
+    <img class="logo1" src="../assets/logo.png" />
   </div>
 </template>
 
@@ -20,12 +24,11 @@ export default {
   data: () => ({
     Station: "Station",
   }),
-
-  method: {
-    hover1() {
+  methods: {
+    hover() {
       this.Station = "車站";
     },
-    leave1() {
+    leave() {
       this.Station = "Station";
     },
   },
@@ -49,7 +52,7 @@ export default {
   padding-left: 50%;
 }
 .topbar-station-text {
-  top: 7.5%;
+  top: 88px;
   left: 9.3%;
   width: 92px;
   height: 40px;
@@ -61,7 +64,7 @@ export default {
   position: absolute;
 }
 .topbar-history-text {
-  top: 7.5%;
+  top: 88px;
   left: 16.4%;
   width: 94px;
   height: 40px;
