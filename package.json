@@ -9,6 +9,7 @@
         "deploy": "node scripts/gh-pages-deploy.js"
     },
     "dependencies": {
+        "@vue/cli": "^4.5.11",
         "animate.css": "^4.1.1",
         "core-js": "^3.6.5",
         "lib-flexible": "^0.3.2",
